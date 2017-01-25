@@ -15,7 +15,7 @@ node {
 
     stage "deploy to selected environment(local for demo) "
     sh "echo '[i] deploying locally'"
-    sh "docker run --name nginx-hw-example-${env.BUILD_NUMBER} ${buildtag}"
+    sh "docker run -d --name nginx-hw-example-${env.BUILD_NUMBER} ${buildtag}"
 
     stage "notification & wait(demo)"
     sh "echo 'the deployment has now finished'"
