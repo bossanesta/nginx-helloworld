@@ -1,7 +1,5 @@
 node {
 
-    def sha = gitSHA()
-
     def buildtag = "nginx-hello-world-${env.BUILD_NUMBER}"
 
     def branch = "${env.BRANCH_NAME}".replaceAll('/','_')
