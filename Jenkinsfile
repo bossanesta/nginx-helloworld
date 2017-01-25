@@ -18,11 +18,11 @@ node {
     sh "docker run -d -p 8181:8181 --name nginx-hw-example-${env.BUILD_NUMBER} ${buildtag}"
 
     stage "notification & wait(demo)"
-    sh "echo 'the deployment has now finished'"
+    sh "echo '[i] the deployment has now finished'"
     sh "sleep 60"
 
     stage "finish build"
-    sh "[i] echo 'cleaning up all resources'"
+    sh "echo '[i] cleaning up all resources'"
     sh "docker rm nginx-hw-example-${env.BUILD_NUMBER}"
     sh "docker rm ${buildtag}"
 }
