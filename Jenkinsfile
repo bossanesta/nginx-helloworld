@@ -22,7 +22,7 @@ node {
     sh "sleep 60"
 
     stage "finish build"
-    sh "cleaning up all resources used(demo)"
+    sh "cleaning up all resources"
     sh "docker rm nginx-hw-example-${env.BUILD_NUMBER}"
     sh "docker rm ${buildtag}"
 }
