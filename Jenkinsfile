@@ -23,8 +23,8 @@ node {
 
     stage "finish build"
     sh "echo 'lets now clean any thing shall we?'"
-    # sh "echo '[i] cleaning up all resources'"
-    # sh "docker rm -f nginx-hw-example-${env.BUILD_NUMBER}"
-    # sh "docker rmi ${buildtag}"
+    // sh "echo '[i] cleaning up all resources'"
+    // sh "docker rm -f nginx-hw-example-${env.BUILD_NUMBER}"
+    // sh "docker rmi ${buildtag}"
 }
 
